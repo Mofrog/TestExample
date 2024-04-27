@@ -18,6 +18,9 @@ var health: int = max_health:
 			health = max_health
 		else:
 			health = new_health
+		
+		if health <= 0:
+			Globals.restart_game()
 
 @onready var sprite: AnimatedSprite2D = $Sprite
 

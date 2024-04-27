@@ -10,6 +10,7 @@ signal local_save()
 ## Print custom message in HUD
 signal print_message(message: String)
 
+
 ## Current character link, used for prevent spawn dublicates
 var character_link: CharacterBody2D = null
 
@@ -36,3 +37,15 @@ func close_saved_doors() -> void:
 	for house in houses_data.keys():
 		houses_data.merge( { house : false }, true )
 	close_doors.emit()
+
+
+## Restart game, reset data and character
+func restart_game() -> void:
+	houses_data = {}
+	objects_data = {}
+	current_house_spawn_point = Vector2.ZERO
+	character_data = {}
+	character_link = null
+	var scene = ResourceLoader.load("res://src/outdoor.tscn")
+	get_tree().call_deferred("unload_current_scene")
+	get_tree().call_deferred("change_scene_to_packed", scene)

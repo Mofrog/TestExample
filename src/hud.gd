@@ -14,8 +14,9 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	var character: CharacterBody2D = Globals.character_link
-	health.text = str("HP : ", character.health, " / ", character.max_health)
-	key.text = str("Ключи : ", character.key_count)
+	if character != null:
+		health.text = str("HP : ", character.health, " / ", character.max_health)
+		key.text = str("Ключи : ", character.key_count)
 
 
 func _on_print_message(message: String) -> void:
