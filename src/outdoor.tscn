@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dvaey5gqoysiv"]
+[gd_scene load_steps=12 format=3 uid="uid://dvaey5gqoysiv"]
 
 [ext_resource type="TileSet" uid="uid://daqj8k8kj5t07" path="res://assets/tileset.tres" id="1_k6ufg"]
 [ext_resource type="PackedScene" uid="uid://chwr68ceyql2f" path="res://src/houses/house.tscn" id="3_3rul6"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dd03pa474u82i" path="res://src/pickables/olive.tscn" id="8_0oxso"]
 [ext_resource type="PackedScene" uid="uid://dxi34uxfudmuv" path="res://src/pickables/alarm_potion.tscn" id="9_rtgi0"]
 [ext_resource type="PackedScene" uid="uid://d0e8r3f738ssp" path="res://src/spawn_point.tscn" id="10_jd0ku"]
+[ext_resource type="PackedScene" uid="uid://cwp7ulds8qumd" path="res://src/interactive_object.tscn" id="11_3ncoo"]
 
 [node name="Outdoor" type="Node2D"]
 
@@ -29,14 +30,19 @@ layer_1/tile_data = PackedInt32Array(2031622, 524288, 2, 2031623, 524288, 2, 203
 position = Vector2(414, 446)
 house_interior_path = "res://src/houses/house_interior.tscn"
 
+[node name="House4" parent="." instance=ExtResource("3_3rul6")]
+position = Vector2(784, 446)
+house_interior_path = "res://src/houses/house_interior.tscn"
+
 [node name="House2" parent="." instance=ExtResource("3_3rul6")]
 position = Vector2(548, 420)
-layer_0/tile_data = PackedInt32Array(65534, 262144, 6, 0, 393216, 6, 1, 458752, 6, -65535, 458752, 5, -65536, 393216, 5, -2, 262144, 5, -1, 393216, 5, -131074, 262144, 4, -196607, 458752, 4, -65538, 393216, 4, -65537, 393216, 4, -131072, 393216, 4, -131071, 393216, 4, -131073, 327680, 4, -196608, 327680, 4)
+layer_0/tile_data = PackedInt32Array(65534, 262144, 6, 0, 393216, 6, 1, 458752, 6, -65535, 458752, 5, -65536, 393216, 5, -2, 262144, 5, -65538, 393216, 4, -65537, 393216, 4, -131072, 393216, 4, -131071, 393216, 4, -1, 393216, 5, -131074, 262144, 4, -196607, 458752, 4, -131073, 327680, 4, -196608, 327680, 4)
 is_open = true
 house_interior_path = "res://src/houses/house_interior_2.tscn"
 
 [node name="House3" parent="." instance=ExtResource("3_3rul6")]
 position = Vector2(678, 446)
+layer_0/tile_data = PackedInt32Array(65534, 262144, 6, 0, 393216, 6, 1, 458752, 6, -65535, 458752, 5, -65536, 393216, 5, -2, 262144, 5, -1, 393216, 5, -196607, 327680, 3, -131071, 327680, 4, -131074, 262144, 3, -65537, 327680, 4, -65538, 393216, 4, -131072, 393216, 4, -131073, 393216, 4, -196608, 393216, 4)
 house_interior_path = ""
 
 [node name="PickableObjectsPool" type="Node2D" parent="."]
@@ -69,3 +75,12 @@ position = Vector2(500, 535)
 [node name="SpawnPoint" parent="." instance=ExtResource("10_jd0ku")]
 position = Vector2(500, 500)
 default_spawn_point = true
+
+[node name="InteractiveObject" parent="." instance=ExtResource("11_3ncoo")]
+position = Vector2(592, 536)
+description = "Первый объект"
+
+[node name="InteractiveObject2" parent="." instance=ExtResource("11_3ncoo")]
+position = Vector2(545, 537)
+layer_0/tile_data = PackedInt32Array(-1, 851968, 5, -65537, 786432, 4, -131073, 851968, 4)
+description = "Второй объект"

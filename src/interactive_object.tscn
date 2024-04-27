@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwp7ulds8qumd"]
+
+[ext_resource type="TileSet" uid="uid://daqj8k8kj5t07" path="res://assets/tileset.tres" id="1_qhcdr"]
+[ext_resource type="Script" path="res://src/interactive_object.gd" id="2_hflkk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vjktd"]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ionhg"]
+
+[node name="InteractiveObject" type="TileMap"]
+tile_set = ExtResource("1_qhcdr")
+format = 2
+layer_0/z_index = 2
+layer_0/tile_data = PackedInt32Array(-1, 851968, 5, -65537, 851968, 4)
+script = ExtResource("2_hflkk")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-9, -4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_vjktd")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-9, -4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_ionhg")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

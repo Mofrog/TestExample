@@ -27,4 +27,4 @@ var objects_data: Dictionary = {}
 func close_saved_doors() -> void:
 	for house in houses_data.keys():
 		houses_data.merge( { house : false }, true )
-		close_doors.emit()
+	close_doors.emit()
