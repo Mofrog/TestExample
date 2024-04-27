@@ -44,7 +44,7 @@ func _process(delta: float) -> void:
 
 
 ## Local save of current character params
-func _on_local_save():
+func _on_local_save() -> void:
 	Globals.character_data = {
 		"max_health" = max_health,
 		"health" = health,

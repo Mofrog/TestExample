@@ -19,9 +19,12 @@ var current_house_spawn_point: Vector2 = Vector2.ZERO
 ## Saved all game houses data
 var houses_data: Dictionary = {}
 
+## Saved all game objects data
+var objects_data: Dictionary = {}
+
 
 ## Close all doors in game
-func close_saved_doors():
+func close_saved_doors() -> void:
 	for house in houses_data.keys():
 		houses_data.merge( { house : false }, true )
 		close_doors.emit()

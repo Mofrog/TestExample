@@ -43,7 +43,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 
 ## Change scene to house interior
-func _enter_the_house():
+func _enter_the_house() -> void:
 	if is_open:
 		Globals.local_save.emit()
 		Globals.current_house_spawn_point = spawn.global_position
@@ -51,9 +51,9 @@ func _enter_the_house():
 		get_tree().call_deferred("change_scene_to_packed", scene)
 
 
-func _on_close_doors():
+func _on_close_doors() -> void:
 	is_open = false
 
 
-func _on_local_save():
+func _on_local_save() -> void:
 	Globals.houses_data.merge( { global_position : is_open }, true )

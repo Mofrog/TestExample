@@ -14,7 +14,7 @@ func _ready() -> void:
 
 
 ## Load character from data, if data is empty, creates a new character
-func load_character():
+func load_character() -> void:
 	var character_instance = character.instantiate()
 	
 	# Set position of character spawn
