@@ -1,12 +1,13 @@
 extends CharacterBody2D
-## Describe base character movement and mechanics
+## Describes base character movement and mechanics
 
 ## Character max health
-@export_range(1, 1, 1, "or_greater") var max_health: int = 100:
+@export_range(1, 1, 1, "or_greater") var max_health: int = 10:
 	set(new_max_health):
 		if health > new_max_health:
 			health = new_max_health
 		max_health = new_max_health
+
 ## Current count of keys, character use key to open doors
 @export_range(0, 0, 1, "or_greater") var key_count: int = 0
 
@@ -19,6 +20,10 @@ var health: int = max_health:
 			health = new_health
 
 @onready var sprite: AnimatedSprite2D = $Sprite
+
+
+func _ready() -> void:
+	Globals.local_save.connect(_on_local_save)
 
 
 func _process(delta: float) -> void:
@@ -34,7 +39,14 @@ func _process(delta: float) -> void:
 		sprite.play("walk_up")
 	elif movement_vector.y > 0:
 		sprite.play("walk_down")
-	else:
-		sprite.play("wait")
 	
 	move_and_collide(movement_vector.normalized() * delta * 100)
+
+
+## Local save of current character params
+func _on_local_save():
+	Globals.character_data = {
+		"max_health" = max_health,
+		"health" = health,
+		"key_count" = key_count,
+	}

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwnb2mgysal8b"]
+
+[ext_resource type="Script" path="res://src/houses/interior_exit.gd" id="1_fbr3c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yc1vd"]
+
+[node name="InteriorExit" type="Area2D"]
+script = ExtResource("1_fbr3c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yc1vd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
