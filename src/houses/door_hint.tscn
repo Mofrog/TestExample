@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://csq1ilhbrc02c"]
+
+[ext_resource type="Script" path="res://src/houses/door_hint.gd" id="1_ahi2i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uugx3"]
+bg_color = Color(0, 0, 0, 0.2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wehnr"]
+bg_color = Color(0.203922, 0.203922, 0.203922, 1)
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[node name="DoorHint" type="CanvasLayer"]
+script = ExtResource("1_ahi2i")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_uugx3")
+
+[node name="PanelContainer" type="PanelContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wehnr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Hint" type="Label" parent="Control/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Вы хотите потратить 1 ключ и открыть дверь?"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="BtnYes" type="Button" parent="Control/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Да"
+
+[node name="BtnNo" type="Button" parent="Control/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Нет"
+
+[connection signal="pressed" from="Control/PanelContainer/VBoxContainer/HBoxContainer/BtnYes" to="." method="_on_btn_yes_pressed"]
+[connection signal="pressed" from="Control/PanelContainer/VBoxContainer/HBoxContainer/BtnNo" to="." method="_on_btn_no_pressed"]

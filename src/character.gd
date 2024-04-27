@@ -30,6 +30,9 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	if Globals.block_character_movement:
+		return
+	
 	var movement_vector: Vector2 = Vector2.ZERO
 	movement_vector.x = Input.get_axis("walk_left", "walk_right")
 	movement_vector.y  = Input.get_axis("walk_up", "walk_down")

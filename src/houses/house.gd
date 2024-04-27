@@ -37,8 +37,10 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			and body.get("key_count") != null \
 			and body.get("key_count") > 0 \
 			and not house_interior_path.is_empty():
-		body.key_count -= 1
-		is_open = true
+		
+		var hint = ResourceLoader.load("res://src/houses/door_hint.tscn").instantiate()
+		hint.user_answer.connect(_on_hint_answer.bind(body))
+		add_child(hint)
 	_enter_the_house()
 
 
@@ -57,3 +59,10 @@ func _on_close_doors() -> void:
 
 func _on_local_save() -> void:
 	Globals.houses_data.merge( { global_position : is_open }, true )
+
+
+func _on_hint_answer(answer: bool, character: CharacterBody2D) -> void:
+	if answer:
+		character.key_count -= 1
+		is_open = true
+		_on_area_2d_body_entered(character)

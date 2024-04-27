@@ -8,6 +8,9 @@ var _is_character_entered: bool = false
 
 
 func _process(_delta: float) -> void:
+	if Globals.block_character_movement:
+		return
+	
 	if Input.is_action_just_pressed("interact") and _is_character_entered:
 		Globals.print_message.emit(description)
 

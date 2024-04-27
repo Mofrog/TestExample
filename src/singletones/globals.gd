@@ -11,6 +11,9 @@ signal local_save()
 signal print_message(message: String)
 
 
+## Block all character movement inputs and interactions
+var block_character_movement: bool = false
+
 ## Current character link, used for prevent spawn dublicates
 var character_link: CharacterBody2D = null
 
