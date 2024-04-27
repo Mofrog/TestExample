@@ -2,12 +2,21 @@ extends CharacterBody2D
 ## Describe base character movement and mechanics
 
 ## Character max health
-@export_range(1, 1, 1, "or_greater") var max_health: int = 100
+@export_range(1, 1, 1, "or_greater") var max_health: int = 100:
+	set(new_max_health):
+		if health > new_max_health:
+			health = new_max_health
+		max_health = new_max_health
 ## Current count of keys, character use key to open doors
 @export_range(0, 0, 1, "or_greater") var key_count: int = 0
 
 ## Current health, set to max_health at start
-var health: int = max_health
+var health: int = max_health:
+	set(new_health):
+		if new_health > max_health:
+			health = max_health
+		else:
+			health = new_health
 
 @onready var sprite: AnimatedSprite2D = $Sprite
 

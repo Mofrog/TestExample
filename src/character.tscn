@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c4y3n7i5ojfj5"]
 
 [ext_resource type="Texture2D" uid="uid://bv81lb01jkvn4" path="res://assets/wait.png" id="1_east8"]
-[ext_resource type="Script" path="res://character.gd" id="1_tytk8"]
+[ext_resource type="Script" path="res://src/character.gd" id="1_tytk8"]
 [ext_resource type="Texture2D" uid="uid://ddd2015yclm8v" path="res://assets/walk_down.png" id="2_ywcc0"]
 [ext_resource type="Texture2D" uid="uid://kkakvsrxqaqq" path="res://assets/wald_left.png" id="3_xlnph"]
 [ext_resource type="Texture2D" uid="uid://dwgx0a0rfq743" path="res://assets/wald_right.png" id="4_r4jhu"]

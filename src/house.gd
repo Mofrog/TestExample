@@ -1,3 +1,4 @@
+@tool
 extends TileMap
 ## Outdoor part of house, character can open house with key and pass over it
 
@@ -7,6 +8,10 @@ extends TileMap
 @onready var door: AnimatedSprite2D = $Door
 ## Character respawn point
 @onready var spawn: Node2D = $Spawn
+
+
+func _init() -> void:
+	Globals.close_doors.connect(_on_close_doors)
 
 
 func _process(_delta: float) -> void:
@@ -23,3 +28,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 					and body.get("key_count") > 0:
 			body.key_count -= 1
 			is_open = true
+
+
+func _on_close_doors():
+	is_open = false

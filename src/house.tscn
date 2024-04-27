@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://chwr68ceyql2f"]
 
 [ext_resource type="TileSet" uid="uid://daqj8k8kj5t07" path="res://assets/tileset.tres" id="1_elsb7"]
-[ext_resource type="Script" path="res://house.gd" id="2_5vm2o"]
+[ext_resource type="Script" path="res://src/house.gd" id="2_5vm2o"]
 [ext_resource type="Texture2D" uid="uid://c1avrj3emxr38" path="res://assets/door_closed.png" id="3_oar1f"]
 [ext_resource type="Texture2D" uid="uid://b3jshlk43func" path="res://assets/door_open.png" id="4_axq37"]
 
@@ -37,6 +37,7 @@ script = ExtResource("2_5vm2o")
 position = Vector2(-9, 9)
 sprite_frames = SubResource("SpriteFrames_0aial")
 animation = &"closed"
+frame_progress = 0.283629
 
 [node name="Area2D" type="Area2D" parent="Door"]
 scale = Vector2(1, 1.92)
