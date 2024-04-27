@@ -4,7 +4,7 @@ extends TileMap
 
 ## If house is open, character can pass over it without using a key
 @export var is_open: bool = false
-## House interior scene, switch to this scene after open the door by character
+## House interior scene, switch to this scene after open
 @export var house_interior_path: String
 
 @onready var door: AnimatedSprite2D = $Door

@@ -18,8 +18,7 @@ func load_character() -> void:
 	var character_instance = character.instantiate()
 	
 	# Set position of character spawn
-	if Globals.current_house_spawn_point != Vector2.ZERO \
-			and not interior_spawn_point:
+	if Globals.current_house_spawn_point != Vector2.ZERO and not interior_spawn_point:
 		character_instance.position = Globals.current_house_spawn_point
 		Globals.current_house_spawn_point = Vector2.ZERO
 	else:

@@ -7,6 +7,9 @@ signal close_doors()
 ## Save all objects in game
 signal local_save()
 
+## Print custom message in HUD
+signal print_message(message: String)
+
 ## Current character link, used for prevent spawn dublicates
 var character_link: CharacterBody2D = null
 
@@ -16,11 +19,16 @@ var character_data: Dictionary = {}
 ## This position used for spawn character near last entered house
 var current_house_spawn_point: Vector2 = Vector2.ZERO
 
-## Saved all game houses data
+## Store all saved game houses data
 var houses_data: Dictionary = {}
 
-## Saved all game objects data
+## Store all saved game objects data
 var objects_data: Dictionary = {}
+
+
+func _ready() -> void:
+	var scene: PackedScene = ResourceLoader.load("res://src/hud.tscn")
+	get_tree().root.add_child.call_deferred(scene.instantiate()) 
 
 
 ## Close all doors in game
