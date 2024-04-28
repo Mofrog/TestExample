@@ -77,6 +77,7 @@ func _on_trash_pressed() -> void:
 	if _selected_item != null:
 		var drop_position: Vector2 = Globals.character_link.position
 		drop_position.x += randf_range(25, 50)
+		
 		var scene = Globals.character_link.get_parent()
 		Globals.drop_item(_selected_item, drop_position, scene)
 		

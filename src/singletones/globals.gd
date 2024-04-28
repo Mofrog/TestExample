@@ -72,9 +72,22 @@ func drop_item(item: PickableResource, drop_position: Vector2, scene: Node2D) ->
 	object.pickable_resource = item
 	object.position = drop_position
 	
+	var object_pool: Node2D = _find_object_pool(scene)
+	object_pool.add_child(object)
+
+
+## Find first object pool, or create new
+func _find_object_pool(scene: Node2D) -> Node2D:
+	if scene is PickableObjectsPool:
+		return scene
+	
+	for child in scene.get_children():
+		if child is PickableObjectsPool:
+			return child
+	
 	var object_pool: Node2D = Node2D.new()
 	var script: Script = ResourceLoader.load("res://src/pickables/pickable_objects_pool.gd")
-	
 	object_pool.set_script(script)
-	object_pool.add_child(object)
 	scene.add_child(object_pool)
+	
+	return object_pool

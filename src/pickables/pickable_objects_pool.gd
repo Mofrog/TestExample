@@ -1,3 +1,4 @@
+class_name PickableObjectsPool
 extends Node2D
 ## Simple pool of scene objects, store object position and it state, reload unused objects and delete used.
 

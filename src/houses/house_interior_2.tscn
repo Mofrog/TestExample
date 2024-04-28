@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://lp28yhx2o32a"]
+[gd_scene load_steps=6 format=3 uid="uid://lp28yhx2o32a"]
 
 [ext_resource type="TileSet" uid="uid://daqj8k8kj5t07" path="res://assets/tileset.tres" id="1_bk35t"]
 [ext_resource type="PackedScene" uid="uid://d0e8r3f738ssp" path="res://src/spawn_point.tscn" id="2_b51x0"]
 [ext_resource type="PackedScene" uid="uid://cwnb2mgysal8b" path="res://src/houses/interior_exit.tscn" id="3_dq1ji"]
+[ext_resource type="Script" path="res://src/pickables/pickable_objects_pool.gd" id="4_1xg7l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_261c2"]
 
@@ -63,3 +64,6 @@ scale = Vector2(10.9098, -68.4018)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/StaticBody2D3"]
 shape = SubResource("RectangleShape2D_261c2")
+
+[node name="PickableObjectsPool" type="Node2D" parent="."]
+script = ExtResource("4_1xg7l")
