@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PickableResource" load_steps=3 format=3 uid="uid://t3iobvonpeis"]
+
+[ext_resource type="Script" path="res://src/pickables/pickable_resource.gd" id="1_dwlx6"]
+[ext_resource type="Texture2D" uid="uid://bv81lb01jkvn4" path="res://assets/wait.png" id="1_mx3tn"]
+
+[resource]
+script = ExtResource("1_dwlx6")
+name = "Жетон"
+description = "Круглый кусок металла с числом 14. Нельзя использовать."
+icon = ExtResource("1_mx3tn")
+is_can_add_to_inventory = true
+consumable = true
+usable = false

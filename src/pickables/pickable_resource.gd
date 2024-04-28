@@ -10,6 +10,10 @@ extends Resource
 @export var icon: Texture2D
 ## Is this object can be added to inventory
 @export var is_can_add_to_inventory: bool = true
+## Is this object will be deleted after use
+@export var consumable: bool = true
+## Is this object can be used by character
+@export var usable: bool = true
 
 
 ## Extend method in child class for interaction with character

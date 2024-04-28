@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://d1ic8ospoiy68"]
+[gd_scene load_steps=10 format=3 uid="uid://d1ic8ospoiy68"]
 
 [ext_resource type="TileSet" uid="uid://daqj8k8kj5t07" path="res://assets/tileset.tres" id="1_ofqmx"]
 [ext_resource type="Script" path="res://src/pickables/pickable_objects_pool.gd" id="2_mw4un"]
@@ -8,6 +8,8 @@
 [ext_resource type="Resource" uid="uid://clq3xcgdmtnjg" path="res://src/pickables/resources/olives.tres" id="5_q3pyu"]
 [ext_resource type="Resource" uid="uid://cvuisjcef5uf0" path="res://src/pickables/resources/alarm_potion.tres" id="6_aledn"]
 [ext_resource type="PackedScene" uid="uid://cwnb2mgysal8b" path="res://src/houses/interior_exit.tscn" id="6_f3k6j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0g8cg"]
 
 [node name="HouseInterior" type="Node2D"]
 
@@ -47,3 +49,38 @@ interior_spawn_point = true
 position = Vector2(540, 567)
 scale = Vector2(2.32, 1.44)
 outdoor_path = "res://src/outdoor.tscn"
+
+[node name="Collisions" type="Node2D" parent="."]
+position = Vector2(45, 125)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Collisions"]
+position = Vector2(269, 359)
+rotation = 3.14159
+scale = Vector2(10.9098, -37.3618)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/StaticBody2D"]
+shape = SubResource("RectangleShape2D_0g8cg")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Collisions"]
+position = Vector2(723, 368)
+rotation = 3.14159
+scale = Vector2(10.9098, -37.3618)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/StaticBody2D4"]
+shape = SubResource("RectangleShape2D_0g8cg")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Collisions"]
+position = Vector2(548, 189)
+rotation = -1.5708
+scale = Vector2(10.9098, -68.4018)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/StaticBody2D2"]
+shape = SubResource("RectangleShape2D_0g8cg")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Collisions"]
+position = Vector2(555, 556)
+rotation = -1.5708
+scale = Vector2(10.9098, -68.4018)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/StaticBody2D3"]
+shape = SubResource("RectangleShape2D_0g8cg")

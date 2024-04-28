@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PickableTeleportationPotion" load_steps=3 format=3 uid="uid://bh14cumxreovp"]
+
+[ext_resource type="Texture2D" uid="uid://dcpf58gdgk7k7" path="res://assets/teleportation_potion.png" id="1_jykh8"]
+[ext_resource type="Script" path="res://src/pickables/teleportation_potion.gd" id="1_r4qmr"]
+
+[resource]
+script = ExtResource("1_r4qmr")
+teleportation_radius = 50.0
+name = "Зелье телепортации"
+description = "Телепортирует пользователя в случайном направлении на некоторое расстояние. Не может
+телепортировать внутрь физических тел или за пределы невидимых стен."
+icon = ExtResource("1_jykh8")
+is_can_add_to_inventory = true
+consumable = true
+usable = true

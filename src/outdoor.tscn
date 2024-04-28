@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dvaey5gqoysiv"]
+[gd_scene load_steps=17 format=3 uid="uid://dvaey5gqoysiv"]
 
 [ext_resource type="TileSet" uid="uid://daqj8k8kj5t07" path="res://assets/tileset.tres" id="1_k6ufg"]
 [ext_resource type="PackedScene" uid="uid://chwr68ceyql2f" path="res://src/houses/house.tscn" id="3_3rul6"]
@@ -12,6 +12,11 @@
 [ext_resource type="Resource" uid="uid://cvuisjcef5uf0" path="res://src/pickables/resources/alarm_potion.tres" id="10_13inc"]
 [ext_resource type="PackedScene" uid="uid://d0e8r3f738ssp" path="res://src/spawn_point.tscn" id="10_jd0ku"]
 [ext_resource type="PackedScene" uid="uid://cwp7ulds8qumd" path="res://src/interactive_object.tscn" id="11_3ncoo"]
+[ext_resource type="Resource" uid="uid://4hn5c3dgai0j" path="res://src/pickables/resources/amulet.tres" id="11_7uyf0"]
+[ext_resource type="Resource" uid="uid://t3iobvonpeis" path="res://src/pickables/resources/token.tres" id="12_h3s5y"]
+[ext_resource type="Resource" uid="uid://bh14cumxreovp" path="res://src/pickables/resources/teleportation_potion.tres" id="13_lp47v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mg7qn"]
 
 [node name="Outdoor" type="Node2D"]
 
@@ -77,6 +82,42 @@ pickable_resource = ExtResource("7_sgt32")
 position = Vector2(626, 527)
 pickable_resource = ExtResource("10_13inc")
 
+[node name="Amulet" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
+position = Vector2(495, 523)
+pickable_resource = ExtResource("11_7uyf0")
+
+[node name="Token" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
+position = Vector2(617, 432)
+pickable_resource = ExtResource("12_h3s5y")
+
+[node name="TeleportationPotion" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
+position = Vector2(482, 428)
+pickable_resource = ExtResource("13_lp47v")
+
+[node name="TeleportationPotion2" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
+position = Vector2(447, 406)
+pickable_resource = ExtResource("13_lp47v")
+
+[node name="TeleportationPotion3" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
+position = Vector2(476, 394)
+pickable_resource = ExtResource("13_lp47v")
+
+[node name="TeleportationPotion4" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
+position = Vector2(446, 375)
+pickable_resource = ExtResource("13_lp47v")
+
+[node name="TeleportationPotion5" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
+position = Vector2(477, 361)
+pickable_resource = ExtResource("13_lp47v")
+
+[node name="TeleportationPotion6" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
+position = Vector2(404, 367)
+pickable_resource = ExtResource("13_lp47v")
+
+[node name="TeleportationPotion7" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
+position = Vector2(375, 393)
+pickable_resource = ExtResource("13_lp47v")
+
 [node name="SpawnPoint" parent="." instance=ExtResource("10_jd0ku")]
 position = Vector2(500, 500)
 default_spawn_point = true
@@ -89,3 +130,37 @@ description = "Первый объект"
 position = Vector2(545, 537)
 layer_0/tile_data = PackedInt32Array(-1, 851968, 5, -65537, 786432, 4, -131073, 851968, 4)
 description = "Второй объект"
+
+[node name="Collisions" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Collisions"]
+position = Vector2(-12, 370)
+rotation = 3.14159
+scale = Vector2(10.9098, -37.3618)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/StaticBody2D"]
+shape = SubResource("RectangleShape2D_mg7qn")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Collisions"]
+position = Vector2(1127, 354)
+rotation = 3.14159
+scale = Vector2(10.9098, -37.3618)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/StaticBody2D4"]
+shape = SubResource("RectangleShape2D_mg7qn")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Collisions"]
+position = Vector2(544, 43)
+rotation = -1.5708
+scale = Vector2(10.9098, -68.4018)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/StaticBody2D2"]
+shape = SubResource("RectangleShape2D_mg7qn")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Collisions"]
+position = Vector2(559, 679)
+rotation = -1.5708
+scale = Vector2(10.9098, -68.4018)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/StaticBody2D3"]
+shape = SubResource("RectangleShape2D_mg7qn")

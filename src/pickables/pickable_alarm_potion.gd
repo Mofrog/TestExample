@@ -1,5 +1,6 @@
 class_name PickableAlarmPotion
 extends PickableResource
+## Closes all doors at game
 
 
 ## Extend method in child class for activate effect

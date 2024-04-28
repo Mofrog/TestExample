@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PickableHealth" load_steps=3 format=3 uid="uid://4hn5c3dgai0j"]
+
+[ext_resource type="Texture2D" uid="uid://bw368vi1ccxpe" path="res://assets/amulet.png" id="1_26xtg"]
+[ext_resource type="Script" path="res://src/pickables/pickable_health.gd" id="1_eyqwu"]
+
+[resource]
+script = ExtResource("1_eyqwu")
+health_count = -9
+max_health_count = 1
+name = "Амулет"
+description = "Уменьшает здоровье пользователя на 9, увеличивает максимальное здоровье пользователя на 1. Не расходуется
+при использовании."
+icon = ExtResource("1_26xtg")
+is_can_add_to_inventory = true
+consumable = false

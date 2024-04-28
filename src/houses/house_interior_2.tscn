@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://lp28yhx2o32a"]
+[gd_scene load_steps=5 format=3 uid="uid://lp28yhx2o32a"]
 
 [ext_resource type="TileSet" uid="uid://daqj8k8kj5t07" path="res://assets/tileset.tres" id="1_bk35t"]
 [ext_resource type="PackedScene" uid="uid://d0e8r3f738ssp" path="res://src/spawn_point.tscn" id="2_b51x0"]
 [ext_resource type="PackedScene" uid="uid://cwnb2mgysal8b" path="res://src/houses/interior_exit.tscn" id="3_dq1ji"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_261c2"]
 
 [node name="HouseInterior2" type="Node2D"]
 
@@ -27,3 +29,37 @@ interior_spawn_point = true
 position = Vector2(540, 567)
 scale = Vector2(2.32, 1.44)
 outdoor_path = "res://src/outdoor.tscn"
+
+[node name="Collisions" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Collisions"]
+position = Vector2(308, 469)
+rotation = 3.14159
+scale = Vector2(10.9098, -37.3618)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/StaticBody2D"]
+shape = SubResource("RectangleShape2D_261c2")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Collisions"]
+position = Vector2(771, 416)
+rotation = 3.14159
+scale = Vector2(10.9098, -37.3618)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/StaticBody2D4"]
+shape = SubResource("RectangleShape2D_261c2")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Collisions"]
+position = Vector2(579, 315)
+rotation = -1.5708
+scale = Vector2(10.9098, -68.4018)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/StaticBody2D2"]
+shape = SubResource("RectangleShape2D_261c2")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Collisions"]
+position = Vector2(559, 679)
+rotation = -1.5708
+scale = Vector2(10.9098, -68.4018)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/StaticBody2D3"]
+shape = SubResource("RectangleShape2D_261c2")

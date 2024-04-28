@@ -16,7 +16,7 @@ var _selected_item: PickableResource = null
 
 
 func _process(_delta: float) -> void:
-	btn_use.disabled = _selected_item == null
+	btn_use.disabled = _selected_item == null or not _selected_item.usable
 	btn_trash.disabled = _selected_item == null
 
 
@@ -65,12 +65,14 @@ func _on_visibility_changed() -> void:
 func _on_use_pressed() -> void:
 	if _selected_item != null:
 		_selected_item.set_effect(Globals.character_link)
-		Globals.inventory_data.erase(_selected_item)
+		if _selected_item.consumable:
+			Globals.inventory_data.erase(_selected_item)
 		_selected_item = null
 		visible = false
 		Globals.block_character_movement = false
 
 
+## Trow away item, spawn near current character
 func _on_trash_pressed() -> void:
 	if _selected_item != null:
 		var drop_position: Vector2 = Globals.character_link.position
