@@ -20,6 +20,12 @@ var character_link: CharacterBody2D = null
 ## Saved character data
 var character_data: Dictionary = {}
 
+## Store character inventory data
+var inventory_data: Array[PickableResource] = []
+
+## Maximum character inventory size
+var character_inventory_size: int = 4
+
 ## This position used for spawn character near last entered house
 var current_house_spawn_point: Vector2 = Vector2.ZERO
 
@@ -44,11 +50,31 @@ func close_saved_doors() -> void:
 
 ## Restart game, reset data and character
 func restart_game() -> void:
-	houses_data = {}
-	objects_data = {}
+	houses_data.clear()
+	objects_data.clear()
 	current_house_spawn_point = Vector2.ZERO
-	character_data = {}
+	character_data.clear()
+	inventory_data.clear()
 	character_link = null
 	var scene = ResourceLoader.load("res://src/outdoor.tscn")
 	get_tree().call_deferred("unload_current_scene")
 	get_tree().call_deferred("change_scene_to_packed", scene)
+
+
+## Append pickup item to character inventory
+func add_object_to_inventory(item: PickableResource) -> void:
+	inventory_data.append(item)
+
+
+## Drop item at position
+func drop_item(item: PickableResource, drop_position: Vector2, scene: Node2D) -> void:
+	var object: PickableObject = PickableObject.new()
+	object.pickable_resource = item
+	object.position = drop_position
+	
+	var object_pool: Node2D = Node2D.new()
+	var script: Script = ResourceLoader.load("res://src/pickables/pickable_objects_pool.gd")
+	
+	object_pool.set_script(script)
+	object_pool.add_child(object)
+	scene.add_child(object_pool)

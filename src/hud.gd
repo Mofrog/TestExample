@@ -1,11 +1,12 @@
-extends Control
+extends CanvasLayer
 ## Base class of HUD elements
 
-@onready var health: Label =  $PanelContainer/VBoxContainer/Health
-@onready var key: Label = $PanelContainer/VBoxContainer/Key
-@onready var hint_panel: PanelContainer = $PanelContainer2
-@onready var hint: Label = $PanelContainer2/Hint
-@onready var hint_timer: Timer = $PanelContainer2/HintTimer
+@onready var health: Label = $Hud/PanelContainer/VBoxContainer/Health
+@onready var key: Label = $Hud/PanelContainer/VBoxContainer/Key
+@onready var hint_panel: PanelContainer = $Hud/PanelContainer2
+@onready var hint: Label = $Hud/PanelContainer2/Hint
+@onready var hint_timer: Timer = $Hud/PanelContainer2/HintTimer
+@onready var inventory: CanvasLayer = $Inventory
 
 
 func _ready() -> void:
@@ -17,6 +18,14 @@ func _process(_delta: float) -> void:
 	if character != null:
 		health.text = str("HP : ", character.health, " / ", character.max_health)
 		key.text = str("Ключи : ", character.key_count)
+	
+	if Input.is_action_just_pressed("open_inventory"):
+		if inventory.visible:
+			inventory.visible = false
+		else:
+			inventory.visible = true
+		
+		Globals.block_character_movement = inventory.visible
 
 
 func _on_print_message(message: String) -> void:

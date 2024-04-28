@@ -8,3 +8,15 @@ extends Resource
 @export_multiline var description: String
 ## Pickable icon, used in HUD and in-game
 @export var icon: Texture2D
+## Is this object can be added to inventory
+@export var is_can_add_to_inventory: bool = true
+
+
+## Extend method in child class for interaction with character
+func interact_with(_character: CharacterBody2D) -> void:
+	pass
+
+
+## Extend method in child class for activate effect
+func set_effect(_character: CharacterBody2D) -> void:
+	pass

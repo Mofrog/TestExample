@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PickableHealth" load_steps=3 format=3 uid="uid://co4xs50nisu3m"]
+
+[ext_resource type="Texture2D" uid="uid://voqppuvs1wyf" path="res://assets/pepper.png" id="1_2kw2b"]
+[ext_resource type="Script" path="res://src/pickables/pickable_health.gd" id="1_dwnj3"]
+
+[resource]
+script = ExtResource("1_dwnj3")
+health_count = -1
+max_health_count = 0
+name = "Перец чили"
+description = "Уменьшает здоровье пользователя на 1."
+icon = ExtResource("1_2kw2b")

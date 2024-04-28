@@ -31,10 +31,19 @@ func _process(_delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
-		interact_with(body)
-		queue_free()
-
-
-## Extend method in child class for interaction with character
-func interact_with(_character: CharacterBody2D) -> void:
-	pass
+		if pickable_resource.is_can_add_to_inventory:
+			if Globals.inventory_data.size() < Globals.character_inventory_size:
+				Globals.add_object_to_inventory(pickable_resource)
+				pickable_resource.interact_with(body)
+				
+				if get_parent().has_method("check_object"):
+					get_parent().check_object(self)
+				
+				queue_free()
+		else:
+			pickable_resource.interact_with(body)
+			
+			if get_parent().has_method("check_object"):
+				get_parent().check_object(self)
+			
+			queue_free()

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PickableHealth" load_steps=3 format=3 uid="uid://dk87m786586am"]
+
+[ext_resource type="Script" path="res://src/pickables/pickable_health.gd" id="1_k5iat"]
+[ext_resource type="Texture2D" uid="uid://canupbu68ri4i" path="res://assets/orange.png" id="1_m4727"]
+
+[resource]
+script = ExtResource("1_k5iat")
+health_count = 1
+max_health_count = 1
+name = "Апельсин"
+description = "Увеличивает максимальное здоровье пользователя на 1, увеличивает здоровье пользователя на 1."
+icon = ExtResource("1_m4727")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PickableAlarmPotion" load_steps=3 format=3 uid="uid://cvuisjcef5uf0"]
+
+[ext_resource type="Script" path="res://src/pickables/pickable_alarm_potion.gd" id="1_a8bfb"]
+[ext_resource type="Texture2D" uid="uid://ce76rjfwnjb0j" path="res://assets/alarm_potion.png" id="1_fqcly"]
+
+[resource]
+script = ExtResource("1_a8bfb")
+name = "Зелье сигнализации"
+description = "Запирает все открытые дома на улице."
+icon = ExtResource("1_fqcly")

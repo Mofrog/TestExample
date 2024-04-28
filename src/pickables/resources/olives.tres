@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PickableHealth" load_steps=3 format=3 uid="uid://clq3xcgdmtnjg"]
+
+[ext_resource type="Texture2D" uid="uid://dipuh787y4hh0" path="res://assets/olive.png" id="1_832sc"]
+[ext_resource type="Script" path="res://src/pickables/pickable_health.gd" id="1_sj5ob"]
+
+[resource]
+script = ExtResource("1_sj5ob")
+health_count = 0
+max_health_count = -10
+name = "Оливки"
+description = "Уменьшает максимальное здоровье пользователя на 10."
+icon = ExtResource("1_832sc")

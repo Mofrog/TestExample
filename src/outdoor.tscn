@@ -1,14 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://dvaey5gqoysiv"]
+[gd_scene load_steps=13 format=3 uid="uid://dvaey5gqoysiv"]
 
 [ext_resource type="TileSet" uid="uid://daqj8k8kj5t07" path="res://assets/tileset.tres" id="1_k6ufg"]
 [ext_resource type="PackedScene" uid="uid://chwr68ceyql2f" path="res://src/houses/house.tscn" id="3_3rul6"]
 [ext_resource type="Script" path="res://src/pickables/pickable_objects_pool.gd" id="3_cr381"]
-[ext_resource type="PackedScene" uid="uid://de744bk7x8khu" path="res://src/pickables/key.tscn" id="4_7am0v"]
-[ext_resource type="PackedScene" uid="uid://cx85ghj6k1ciu" path="res://src/pickables/apple.tscn" id="5_bqelh"]
-[ext_resource type="PackedScene" uid="uid://kn3om50mo63e" path="res://src/pickables/orange.tscn" id="6_xkmla"]
-[ext_resource type="PackedScene" uid="uid://dux4yc40d26fy" path="res://src/pickables/pepper.tscn" id="7_la3rr"]
-[ext_resource type="PackedScene" uid="uid://dd03pa474u82i" path="res://src/pickables/olive.tscn" id="8_0oxso"]
-[ext_resource type="PackedScene" uid="uid://dxi34uxfudmuv" path="res://src/pickables/alarm_potion.tscn" id="9_rtgi0"]
+[ext_resource type="PackedScene" uid="uid://5d8mti62p0vt" path="res://src/pickables/pickable_object.tscn" id="4_jtgjm"]
+[ext_resource type="Resource" uid="uid://cxeqbljp7hn3d" path="res://src/pickables/resources/apple.tres" id="5_fg13c"]
+[ext_resource type="Resource" uid="uid://co4xs50nisu3m" path="res://src/pickables/resources/pepper.tres" id="6_cv616"]
+[ext_resource type="Resource" uid="uid://dk87m786586am" path="res://src/pickables/resources/orange.tres" id="7_df07w"]
+[ext_resource type="Resource" uid="uid://dkiwe0kryl6aj" path="res://src/pickables/resources/key.tres" id="7_sgt32"]
+[ext_resource type="Resource" uid="uid://clq3xcgdmtnjg" path="res://src/pickables/resources/olives.tres" id="8_j284f"]
+[ext_resource type="Resource" uid="uid://cvuisjcef5uf0" path="res://src/pickables/resources/alarm_potion.tres" id="10_13inc"]
 [ext_resource type="PackedScene" uid="uid://d0e8r3f738ssp" path="res://src/spawn_point.tscn" id="10_jd0ku"]
 [ext_resource type="PackedScene" uid="uid://cwp7ulds8qumd" path="res://src/interactive_object.tscn" id="11_3ncoo"]
 
@@ -42,35 +43,39 @@ house_interior_path = "res://src/houses/house_interior_2.tscn"
 
 [node name="House3" parent="." instance=ExtResource("3_3rul6")]
 position = Vector2(678, 446)
-layer_0/tile_data = PackedInt32Array(65534, 262144, 6, 0, 393216, 6, 1, 458752, 6, -65535, 458752, 5, -65536, 393216, 5, -2, 262144, 5, -1, 393216, 5, -196607, 327680, 3, -131071, 327680, 4, -131074, 262144, 3, -65537, 327680, 4, -65538, 393216, 4, -131072, 393216, 4, -131073, 393216, 4, -196608, 393216, 4)
+layer_0/tile_data = PackedInt32Array(65534, 262144, 6, 0, 393216, 6, 1, 458752, 6, -65535, 458752, 5, -65536, 393216, 5, -2, 262144, 5, -65538, 393216, 4, -65537, 327680, 4, -131072, 393216, 4, -131071, 327680, 4, -1, 393216, 5, -196607, 327680, 3, -131074, 262144, 3, -131073, 393216, 4, -196608, 393216, 4)
 house_interior_path = ""
 
 [node name="PickableObjectsPool" type="Node2D" parent="."]
 script = ExtResource("3_cr381")
 
-[node name="Key" parent="PickableObjectsPool" instance=ExtResource("4_7am0v")]
-position = Vector2(412, 534)
+[node name="Apple" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
+position = Vector2(701, 524)
+pickable_resource = ExtResource("5_fg13c")
 
-[node name="Key2" parent="PickableObjectsPool" instance=ExtResource("4_7am0v")]
-position = Vector2(386, 534)
+[node name="Pepper" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
+position = Vector2(726, 524)
+pickable_resource = ExtResource("6_cv616")
 
-[node name="Apple" parent="PickableObjectsPool" instance=ExtResource("5_bqelh")]
-position = Vector2(680, 534)
+[node name="Orange" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
+position = Vector2(751, 525)
+pickable_resource = ExtResource("7_df07w")
 
-[node name="Olive" parent="PickableObjectsPool" instance=ExtResource("8_0oxso")]
-position = Vector2(730, 534)
+[node name="Olives" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
+position = Vector2(781, 526)
+pickable_resource = ExtResource("8_j284f")
 
-[node name="Orange" parent="PickableObjectsPool" instance=ExtResource("6_xkmla")]
-position = Vector2(706, 534)
+[node name="Key" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
+position = Vector2(459, 522)
+pickable_resource = ExtResource("7_sgt32")
 
-[node name="Pepper" parent="PickableObjectsPool" instance=ExtResource("7_la3rr")]
-position = Vector2(656, 534)
+[node name="Key2" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
+position = Vector2(432, 521)
+pickable_resource = ExtResource("7_sgt32")
 
-[node name="Pepper2" parent="PickableObjectsPool" instance=ExtResource("7_la3rr")]
-position = Vector2(632, 534)
-
-[node name="AlarmPotion" parent="PickableObjectsPool" instance=ExtResource("9_rtgi0")]
-position = Vector2(500, 535)
+[node name="AlarmPotion" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
+position = Vector2(626, 527)
+pickable_resource = ExtResource("10_13inc")
 
 [node name="SpawnPoint" parent="." instance=ExtResource("10_jd0ku")]
 position = Vector2(500, 500)

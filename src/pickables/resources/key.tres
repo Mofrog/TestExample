@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PickableKey" load_steps=3 format=3 uid="uid://dkiwe0kryl6aj"]
+
+[ext_resource type="Texture2D" uid="uid://wyo1v5khiks0" path="res://assets/key.png" id="1_jejen"]
+[ext_resource type="Script" path="res://src/pickables/pickable_key.gd" id="2_hld4v"]
+
+[resource]
+script = ExtResource("2_hld4v")
+key_count = 1
+name = "Ключ"
+description = "Увеличивает количество ключей пользователя на 1."
+icon = ExtResource("1_jejen")
+is_can_add_to_inventory = false

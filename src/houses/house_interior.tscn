@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://d1ic8ospoiy68"]
+[gd_scene load_steps=9 format=3 uid="uid://d1ic8ospoiy68"]
 
 [ext_resource type="TileSet" uid="uid://daqj8k8kj5t07" path="res://assets/tileset.tres" id="1_ofqmx"]
-[ext_resource type="PackedScene" uid="uid://de744bk7x8khu" path="res://src/pickables/key.tscn" id="2_aivhs"]
 [ext_resource type="Script" path="res://src/pickables/pickable_objects_pool.gd" id="2_mw4un"]
-[ext_resource type="PackedScene" uid="uid://dd03pa474u82i" path="res://src/pickables/olive.tscn" id="3_mppn0"]
-[ext_resource type="PackedScene" uid="uid://dxi34uxfudmuv" path="res://src/pickables/alarm_potion.tscn" id="4_gdtxy"]
+[ext_resource type="PackedScene" uid="uid://5d8mti62p0vt" path="res://src/pickables/pickable_object.tscn" id="4_gdtxy"]
+[ext_resource type="Resource" uid="uid://dkiwe0kryl6aj" path="res://src/pickables/resources/key.tres" id="4_volx0"]
 [ext_resource type="PackedScene" uid="uid://d0e8r3f738ssp" path="res://src/spawn_point.tscn" id="5_83mt7"]
+[ext_resource type="Resource" uid="uid://clq3xcgdmtnjg" path="res://src/pickables/resources/olives.tres" id="5_q3pyu"]
+[ext_resource type="Resource" uid="uid://cvuisjcef5uf0" path="res://src/pickables/resources/alarm_potion.tres" id="6_aledn"]
 [ext_resource type="PackedScene" uid="uid://cwnb2mgysal8b" path="res://src/houses/interior_exit.tscn" id="6_f3k6j"]
 
 [node name="HouseInterior" type="Node2D"]
@@ -25,14 +26,17 @@ layer_1/tile_data = PackedInt32Array(2031639, 524288, 2, 2031640, 524288, 2, 203
 [node name="PickableObjectsPool" type="Node2D" parent="."]
 script = ExtResource("2_mw4un")
 
-[node name="Key" parent="PickableObjectsPool" instance=ExtResource("2_aivhs")]
+[node name="Key" parent="PickableObjectsPool" instance=ExtResource("4_gdtxy")]
 position = Vector2(456, 531)
+pickable_resource = ExtResource("4_volx0")
 
-[node name="Olive" parent="PickableObjectsPool" instance=ExtResource("3_mppn0")]
+[node name="Olive" parent="PickableObjectsPool" instance=ExtResource("4_gdtxy")]
 position = Vector2(537, 458)
+pickable_resource = ExtResource("5_q3pyu")
 
 [node name="AlarmPotion" parent="PickableObjectsPool" instance=ExtResource("4_gdtxy")]
 position = Vector2(625, 529)
+pickable_resource = ExtResource("6_aledn")
 
 [node name="SpawnPoint" parent="." instance=ExtResource("5_83mt7")]
 position = Vector2(541, 519)
