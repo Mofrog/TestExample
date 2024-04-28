@@ -33,7 +33,7 @@ layer_1/y_sort_origin = 1
 layer_1/tile_data = PackedInt32Array(2031622, 524288, 2, 2031623, 524288, 2, 2031624, 524288, 2, 2031625, 524288, 2, 2031626, 524288, 2, 2031627, 524288, 2, 2031628, 524288, 2, 2031629, 524288, 2, 2031630, 524288, 2, 2031631, 524288, 2, 2031632, 524288, 2, 2031633, 524288, 2, 2031634, 524288, 2, 2031635, 524288, 2, 2031636, 524288, 2, 2031637, 524288, 2, 2031638, 524288, 2, 2031639, 524288, 2, 2031640, 524288, 2, 2031641, 524288, 2, 2031642, 524288, 2, 2031643, 524288, 2, 2031644, 524288, 2, 2031645, 524288, 2, 2031646, 524288, 2, 2031647, 524288, 2, 2031648, 524288, 2, 2031651, 524288, 2, 2031652, 524288, 2, 2031653, 524288, 2, 2031654, 524288, 2, 2031655, 524288, 2, 2031656, 524288, 2, 2031657, 524288, 2, 2031658, 524288, 2, 2031659, 524288, 2, 2031660, 524288, 2, 2031661, 524288, 2, 2031662, 524288, 2, 2031663, 524288, 2, 2031664, 524288, 2, 2031665, 524288, 2, 2031666, 524288, 2, 2031667, 524288, 2, 2031668, 524288, 2, 2031669, 524288, 2, 2031670, 524288, 2, 2031671, 524288, 2, 2031672, 458752, 2, 2031621, 458752, 2, 524293, 589824, 2, 589829, 458752, 2, 655365, 458752, 2, 720901, 458752, 2, 786437, 458752, 2, 851973, 458752, 2, 917509, 458752, 2, 983045, 458752, 2, 1048581, 458752, 2, 1114117, 458752, 2, 1179653, 458752, 2, 1245189, 458752, 2, 1310725, 458752, 2, 1376261, 458752, 2, 1441797, 458752, 2, 1507333, 458752, 2, 1572869, 458752, 2, 1638405, 458752, 2, 1703941, 458752, 2, 1769477, 458752, 2, 1835013, 458752, 2, 1900549, 458752, 2, 1966085, 458752, 2, 524344, 458752, 2, 589880, 458752, 2, 655416, 458752, 2, 720952, 458752, 2, 786488, 458752, 2, 852024, 458752, 2, 917560, 458752, 2, 983096, 458752, 2, 1048632, 458752, 2, 1114168, 458752, 2, 1179704, 458752, 2, 1245240, 458752, 2, 1310776, 458752, 2, 1376312, 458752, 2, 1441848, 458752, 2, 1507384, 458752, 2, 1572920, 458752, 2, 1638456, 458752, 2, 1703992, 458752, 2, 1769528, 458752, 2, 1835064, 458752, 2, 1900600, 458752, 2, 1966136, 458752, 2, 524294, 589824, 2, 524295, 589824, 2, 524296, 589824, 2, 524297, 589824, 2, 524298, 589824, 2, 524299, 589824, 2, 524300, 589824, 2, 524301, 589824, 2, 524302, 589824, 2, 524303, 589824, 2, 524304, 589824, 2, 524305, 589824, 2, 524306, 589824, 2, 524307, 589824, 2, 524308, 589824, 2, 524309, 589824, 2, 524310, 589824, 2, 524311, 589824, 2, 524312, 589824, 2, 524313, 589824, 2, 524314, 589824, 2, 524315, 589824, 2, 524316, 589824, 2, 524317, 589824, 2, 524318, 589824, 2, 524319, 589824, 2, 524320, 589824, 2, 524321, 589824, 2, 524322, 589824, 2, 524323, 589824, 2, 524324, 589824, 2, 524325, 589824, 2, 524326, 589824, 2, 524327, 589824, 2, 524328, 589824, 2, 524329, 589824, 2, 524330, 589824, 2, 524331, 589824, 2, 524332, 589824, 2, 524333, 589824, 2, 524334, 589824, 2, 524335, 589824, 2, 524336, 589824, 2, 524337, 589824, 2, 524338, 589824, 2, 524339, 589824, 2, 524340, 589824, 2, 524341, 589824, 2, 524342, 589824, 2, 524343, 589824, 2, 2031649, 458752, 2, 2031650, 458752, 2)
 
 [node name="House" parent="." instance=ExtResource("3_3rul6")]
-position = Vector2(414, 446)
+position = Vector2(330, 447)
 house_interior_path = "res://src/houses/house_interior.tscn"
 
 [node name="House4" parent="." instance=ExtResource("3_3rul6")]
@@ -41,13 +41,13 @@ position = Vector2(784, 446)
 house_interior_path = "res://src/houses/house_interior.tscn"
 
 [node name="House2" parent="." instance=ExtResource("3_3rul6")]
-position = Vector2(548, 420)
+position = Vector2(545, 355)
 layer_0/tile_data = PackedInt32Array(65534, 262144, 6, 0, 393216, 6, 1, 458752, 6, -65535, 458752, 5, -65536, 393216, 5, -2, 262144, 5, -65538, 393216, 4, -65537, 393216, 4, -131072, 393216, 4, -131071, 393216, 4, -1, 393216, 5, -131074, 262144, 4, -196607, 458752, 4, -131073, 327680, 4, -196608, 327680, 4)
 is_open = true
 house_interior_path = "res://src/houses/house_interior_2.tscn"
 
 [node name="House3" parent="." instance=ExtResource("3_3rul6")]
-position = Vector2(678, 446)
+position = Vector2(739, 372)
 layer_0/tile_data = PackedInt32Array(65534, 262144, 6, 0, 393216, 6, 1, 458752, 6, -65535, 458752, 5, -65536, 393216, 5, -2, 262144, 5, -65538, 393216, 4, -65537, 327680, 4, -131072, 393216, 4, -131071, 327680, 4, -1, 393216, 5, -196607, 327680, 3, -131074, 262144, 3, -131073, 393216, 4, -196608, 393216, 4)
 house_interior_path = ""
 
@@ -55,79 +55,75 @@ house_interior_path = ""
 script = ExtResource("3_cr381")
 
 [node name="Apple" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
-position = Vector2(701, 524)
+position = Vector2(665, 512)
 pickable_resource = ExtResource("5_fg13c")
 
 [node name="Pepper" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
-position = Vector2(726, 524)
+position = Vector2(739, 515)
 pickable_resource = ExtResource("6_cv616")
 
 [node name="Orange" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
-position = Vector2(751, 525)
+position = Vector2(810, 515)
 pickable_resource = ExtResource("7_df07w")
 
 [node name="Olives" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
-position = Vector2(781, 526)
+position = Vector2(890, 514)
 pickable_resource = ExtResource("8_j284f")
 
 [node name="Key" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
-position = Vector2(459, 522)
+position = Vector2(326, 523)
 pickable_resource = ExtResource("7_sgt32")
 
 [node name="Key2" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
-position = Vector2(432, 521)
+position = Vector2(299, 523)
 pickable_resource = ExtResource("7_sgt32")
 
 [node name="AlarmPotion" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
-position = Vector2(626, 527)
+position = Vector2(442, 357)
 pickable_resource = ExtResource("10_13inc")
 
 [node name="Amulet" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
-position = Vector2(495, 523)
+position = Vector2(387, 529)
 pickable_resource = ExtResource("11_7uyf0")
 
 [node name="Token" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
-position = Vector2(617, 432)
+position = Vector2(631, 357)
 pickable_resource = ExtResource("12_h3s5y")
 
 [node name="TeleportationPotion" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
-position = Vector2(482, 428)
-pickable_resource = ExtResource("13_lp47v")
-
-[node name="TeleportationPotion2" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
-position = Vector2(447, 406)
+position = Vector2(366, 357)
 pickable_resource = ExtResource("13_lp47v")
 
 [node name="TeleportationPotion3" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
-position = Vector2(476, 394)
+position = Vector2(317, 357)
 pickable_resource = ExtResource("13_lp47v")
 
 [node name="TeleportationPotion4" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
-position = Vector2(446, 375)
+position = Vector2(366, 381)
 pickable_resource = ExtResource("13_lp47v")
 
 [node name="TeleportationPotion5" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
-position = Vector2(477, 361)
+position = Vector2(342, 357)
 pickable_resource = ExtResource("13_lp47v")
 
 [node name="TeleportationPotion6" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
-position = Vector2(404, 367)
+position = Vector2(340, 382)
 pickable_resource = ExtResource("13_lp47v")
 
 [node name="TeleportationPotion7" parent="PickableObjectsPool" instance=ExtResource("4_jtgjm")]
-position = Vector2(375, 393)
+position = Vector2(315, 382)
 pickable_resource = ExtResource("13_lp47v")
 
 [node name="SpawnPoint" parent="." instance=ExtResource("10_jd0ku")]
-position = Vector2(500, 500)
+position = Vector2(539, 434)
 default_spawn_point = true
 
 [node name="InteractiveObject" parent="." instance=ExtResource("11_3ncoo")]
-position = Vector2(592, 536)
+position = Vector2(571, 521)
 description = "Первый объект"
 
 [node name="InteractiveObject2" parent="." instance=ExtResource("11_3ncoo")]
-position = Vector2(545, 537)
+position = Vector2(500, 525)
 layer_0/tile_data = PackedInt32Array(-1, 851968, 5, -65537, 786432, 4, -131073, 851968, 4)
 description = "Второй объект"
 
@@ -164,3 +160,101 @@ scale = Vector2(10.9098, -68.4018)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/StaticBody2D3"]
 shape = SubResource("RectangleShape2D_mg7qn")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 287.0
+offset_top = 489.0
+offset_right = 342.0
+offset_bottom = 512.0
+text = "Ключи"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 359.0
+offset_top = 538.0
+offset_right = 418.0
+offset_bottom = 561.0
+text = "Амулет"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 430.0
+offset_top = 538.0
+offset_right = 635.0
+offset_bottom = 561.0
+text = "Интерактивные объекты"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 297.0
+offset_top = 319.0
+offset_right = 386.0
+offset_bottom = 342.0
+text = "Телепорты"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 410.0
+offset_top = 321.0
+offset_right = 475.0
+offset_bottom = 344.0
+text = "Тревога"
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 207.0
+offset_top = 431.0
+offset_right = 280.0
+offset_bottom = 454.0
+text = "Здание 1"
+
+[node name="Label8" type="Label" parent="."]
+offset_left = 466.0
+offset_top = 271.0
+offset_right = 609.0
+offset_bottom = 294.0
+text = "Открытое здание"
+
+[node name="Label9" type="Label" parent="."]
+offset_left = 682.0
+offset_top = 288.0
+offset_right = 800.0
+offset_bottom = 311.0
+text = "Пустое здание"
+
+[node name="Label10" type="Label" parent="."]
+offset_left = 829.0
+offset_top = 427.0
+offset_right = 947.0
+offset_bottom = 450.0
+text = "Здание 1 (Копия)"
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 607.0
+offset_top = 322.0
+offset_right = 659.0
+offset_bottom = 345.0
+text = "Жетон"
+
+[node name="Label11" type="Label" parent="."]
+offset_left = 643.0
+offset_top = 528.0
+offset_right = 695.0
+offset_bottom = 551.0
+text = "Яблоко"
+
+[node name="Label12" type="Label" parent="."]
+offset_left = 710.0
+offset_top = 529.0
+offset_right = 761.0
+offset_bottom = 552.0
+text = "Перец"
+
+[node name="Label13" type="Label" parent="."]
+offset_left = 770.0
+offset_top = 528.0
+offset_right = 821.0
+offset_bottom = 551.0
+text = "Апельсин"
+
+[node name="Label14" type="Label" parent="."]
+offset_left = 856.0
+offset_top = 527.0
+offset_right = 919.0
+offset_bottom = 550.0
+text = "Оливки"
